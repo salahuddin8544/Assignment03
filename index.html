@@ -10,39 +10,44 @@
     <link rel="stylesheet" href="style.css">
     <!-- font awesome link -->
     <script src="https://kit.fontawesome.com/9ac297b4ef.js" crossorigin="anonymous"></script>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
 <!----------------
      header section 
     ----------------->
     <header class="container">
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand display-3" href="#"><span class="text-warning">F</span>REELAND</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item ms-lg-5">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item ms-lg-5">
-                    <a class="nav-link" href="#">Course</a>
-                  </li>
-                  <li class="nav-item ms-lg-5">
-                    <a class="nav-link" href="#">About Us</a>
-                  </li>
-                  <li class="nav-item ms-lg-5">
-                    <a class="nav-link" href="#">Contact Us</a>
-                  </li>
-                </ul>
-                <form class="" role="search">
-                  <button class="btn btn-primary font-weight-bolder px-4">Join Now</button>
-                </form>
-              </div>
-            </div>
-          </nav>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand display-3" href="#"><span class="text-warning">F</span>REELAND</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item ms-lg-5">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item ms-lg-5">
+                <a class="nav-link" href="#">Course</a>
+              </li>
+              <li class="nav-item ms-lg-5">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item ms-lg-5">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-primary font-weight-bolder px-5">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
 <!---------------
      main section
@@ -54,14 +59,9 @@
      Carousel section 
     ------------------>
     <section class="container">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">        
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active slide-item">
                 <img src="images/cover/cover-1.png" class="d-block w-100 img-fluid" alt="...">
               <div class="carousel-caption d-md-block">
                 <h1 class="font-weight-bolder">Get Started free <br> Learning</h1>
@@ -69,7 +69,7 @@
                 <button class="btn btn-primary font-weight-bolder py-2 px-4 mb-md-5">Get Started</button>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item slide-item">
               <img src="images/cover/cover-2.png" class="d-block w-100  img-fluid" alt="...">
               <div class="carousel-caption d-md-block">
                 <h1 class="font-weight-bolder">Get Started free <br> Learning</h1>
@@ -77,7 +77,7 @@
                 <button class="btn btn-primary font-weight-bolder py-2 px-4 mb-md-5">Get Started</button>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item slide-item">
               <img src="images/cover/cover-3.jpg" class="d-block w-100 img-fluid" alt="...">
               <div class="carousel-caption d-md-block">
                 <h1 class="font-weight-bolder">Get Started free <br> Learning</h1>
@@ -268,10 +268,56 @@
         <p>If you want to join with us please click in the Register button <br> and pill the form according to the direction. </p>
       </div>
       <div class="col-md-4">
-        <a href="form.html"  class="btn btn-light text-primary py-3 px-5 fw-bolder mt-3 ms-5">Register Now</a>
+          <a class="btn btn-light text-primary px-5 mt-5 fw-bold" type="button" data-toggle="modal" data-target="#myModal"  >Submit</a>
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>  
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+                      </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                        <textarea placeholder="Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                      <div class="mb-3">
+                        <label for="inputState" class="form-label">Choose Your Course</label>
+                        <select id="inputState" class="form-select">
+                          <option selected>Choose...</option>
+                          <option>Fundamental Of UI/UX Design
+                          </option>
+                          <option>Javascript Basic to advanced
+                          </option>
+                          <option>Fullstack Web Development
+                          </option>
+                          <option>Digital Marketing
+                          </option>
+                          <option>Photography Basic Rules
+                          </option>
+                          <option>Motion Graphics
+                          </option>
+                        </select>
+                      </div>
+                      <button type="submit" class="btn btn-primary px-4">Submit</button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>           
+            </div>          
+        </div>        
       </div>
     </div>
   </section>
+  
   <!------------
    succesfull section
   -------------------->
@@ -330,56 +376,176 @@
         <h2>Some Students Feedback</h2>
         <p class="text-muted">Our some student feedback about our course. and what they sea <br> about of course see here</p>
       </div>
-      <div  class="row mt-5">
-        <div class="col-md-6 ">
-        <div class="card p-4 rounded">
-          <div class="d-flex justify-content-between mb-2">
-            <img src="images/comma.png" alt="">
-            <div class="text-warning">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
-            </div>
-          </div>
-          <p class="text-muted">This course teaches you the simple principles expert managers use to improve and motivate employee performance. You'll never have to avoid telling an employee “the
-            truth” again, because the seven techniques we teach will not make employees defensive or afraid. As a manager, or someone who would like to be a manager, you'll also
-            learn specifically what feedback i</p>
-            <div class="d-flex">
-              <img src="images/student/student-5.png" alt="">
-              <div class="ps-2">
-                <p class="fw-bolder p-0 m-0">Awlad Hossain</p>
-                <p class="p-0 m-0">UI Designer</p>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div  class="row mt-5">
+              <div class="col-md-6 ">
+              <div class="card p-4 rounded">
+                <div class="d-flex justify-content-between mb-2">
+                  <img class="small-img" src="images/comma.png" alt="">
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+                <p class="text-muted">This course teaches you the simple principles expert managers use to improve and motivate employee performance. You'll never have to avoid telling an employee “the
+                  truth” again, because the seven techniques we teach will not make employees defensive or afraid. As a manager, or someone who would like to be a manager, you'll also
+                  learn specifically what feedback i</p>
+                  <div class="d-flex">
+                    <img src="images/student/student-5.png" alt="">
+                    <div class="ps-2">
+                      <p class="fw-bolder p-0 m-0">Awlad Hossain</p>
+                      <p class="p-0 m-0">UI Designer</p>
+                    </div>
+                  </div>
               </div>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-6 mt-3">
-          <div class="card p-4 rounded">
-            <div class="d-flex justify-content-between mb-2">
-              <img src="images/comma.png" alt="">
-              <div class="text-warning">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
               </div>
-            </div>
-            <p class="text-muted">This course teaches you the simple principles expert managers use to improve and motivate employee performance. You'll never have to avoid telling an employee “the
-              truth” again, because the seven techniques we teach will not make employees defensive or afraid. As a manager, or someone who would like to be a manager, you'll also
-              learn specifically what feedback i</p>
-              <div class="d-flex">
-                <img src="images/student/student-6.png" alt="">
-                <div class="ps-2">
-                  <p class="fw-bolder p-0 m-0">Shanta Akter</p>
-                  <p class="p-0 m-0">Graphic Designer</p>
+              <div class="col-md-6">
+                <div class="card p-4 rounded">
+                  <div class="d-flex justify-content-between  mb-2">
+                    <img src="images/comma.png" alt="">
+                    <div class="text-warning">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                  </div>
+                  <p class="text-muted">This course teaches you the simple principles expert managers use to improve and motivate employee performance. You'll never have to avoid telling an employee “the
+                    truth” again, because the seven techniques we teach will not make employees defensive or afraid. As a manager, or someone who would like to be a manager, you'll also
+                    learn specifically what feedback i</p>
+                    <div class="d-flex">
+                      <img src="images/student/student-6.png" alt="">
+                      <div class="ps-2">
+                        <p class="fw-bolder p-0 m-0">Shanta Akter</p>
+                        <p class="p-0 m-0">Graphic Designer</p>
+                      </div>
+                    </div>
                 </div>
               </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div  class="row mt-5">
+              <div class="col-md-6 ">
+              <div class="card p-4 rounded">
+                <div class="d-flex justify-content-between mb-2">
+                  <img class="small-img" src="images/comma.png" alt="">
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+                <p class="text-muted">This course teaches you the simple principles expert managers use to improve and motivate employee performance. You'll never have to avoid telling an employee “the
+                  truth” again, because the seven techniques we teach will not make employees defensive or afraid. As a manager, or someone who would like to be a manager, you'll also
+                  learn specifically what feedback i</p>
+                  <div class="d-flex">
+                    <img src="images/student/student-5.png" alt="">
+                    <div class="ps-2">
+                      <p class="fw-bolder p-0 m-0">Awlad Hossain</p>
+                      <p class="p-0 m-0">UI Designer</p>
+                    </div>
+                  </div>
+              </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card p-4 rounded">
+                  <div class="d-flex justify-content-between  mb-2">
+                    <img src="images/comma.png" alt="">
+                    <div class="text-warning">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                  </div>
+                  <p class="text-muted">This course teaches you the simple principles expert managers use to improve and motivate employee performance. You'll never have to avoid telling an employee “the
+                    truth” again, because the seven techniques we teach will not make employees defensive or afraid. As a manager, or someone who would like to be a manager, you'll also
+                    learn specifically what feedback i</p>
+                    <div class="d-flex">
+                      <img src="images/student/student-6.png" alt="">
+                      <div class="ps-2">
+                        <p class="fw-bolder p-0 m-0">Shanta Akter</p>
+                        <p class="p-0 m-0">Graphic Designer</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div  class="row mt-5">
+              <div class="col-md-6 ">
+              <div class="card p-4 rounded">
+                <div class="d-flex justify-content-between mb-2">
+                  <img class="small-img" src="images/comma.png" alt="">
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+                <p class="text-muted">This course teaches you the simple principles expert managers use to improve and motivate employee performance. You'll never have to avoid telling an employee “the
+                  truth” again, because the seven techniques we teach will not make employees defensive or afraid. As a manager, or someone who would like to be a manager, you'll also
+                  learn specifically what feedback i</p>
+                  <div class="d-flex">
+                    <img src="images/student/student-5.png" alt="">
+                    <div class="ps-2">
+                      <p class="fw-bolder p-0 m-0">Awlad Hossain</p>
+                      <p class="p-0 m-0">UI Designer</p>
+                    </div>
+                  </div>
+              </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card p-4 rounded">
+                  <div class="d-flex justify-content-between  mb-2">
+                    <img src="images/comma.png" alt="">
+                    <div class="text-warning">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                  </div>
+                  <p class="text-muted">This course teaches you the simple principles expert managers use to improve and motivate employee performance. You'll never have to avoid telling an employee “the
+                    truth” again, because the seven techniques we teach will not make employees defensive or afraid. As a manager, or someone who would like to be a manager, you'll also
+                    learn specifically what feedback i</p>
+                    <div class="d-flex">
+                      <img src="images/student/student-6.png" alt="">
+                      <div class="ps-2">
+                        <p class="fw-bolder p-0 m-0">Shanta Akter</p>
+                        <p class="p-0 m-0">Graphic Designer</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              </div>
           </div>
         </div>
-        </div>
+        <button class="carousel-control-prev bg-primary position-absolute top-50 start-0 translate-middle d-none d-sm-block indicate
+        " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next bg-primary position-absolute top-50 start-100 translate-middle d-none d-sm-block indicate
+        " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </section>
     <!------------
        accordian section 
@@ -428,11 +594,11 @@
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
           <h5>What is semantic tag ?</h5>
         </button>
       </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
           <p class="text-muted">
             The HTML semantics refers to the tags that provide meaning to an HTML page rather than just presentation. It makes HTML more comprehensible by better defining the different sections and layout of web pages

@@ -1,28 +1,36 @@
 .container{
     margin-bottom: 30px;
 }
-h1{
+.slide-item h1{
     font-size: 100px;
 }
 h2{
     font-size: 60px;
 }
-.carousel-item img{
-    height: 650px;
+.slide-item img{
+    height:650px;
 }
+
 .footer i{
     font-size: 40px;
     margin:0 20px;
 }
-
+.indicate{
+    width:35px;
+    height: 35px;
+    border-radius: 50px;
+}
 @media screen and (min-width:576px) and (max-width: 768px) {
     h1{
         font-size: 80px;
     }
 }
 @media screen and (max-width:575px) {
-    h1{
-        font-size: 60px;
+    .slide-item h1{
+        font-size: 50px;
         margin-bottom: 70px;
+    }
+    .slide-item img {
+        height:450px;
     }
 }
